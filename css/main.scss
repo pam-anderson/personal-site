@@ -1,37 +1,62 @@
 $color-background: #F9F9F9;
-$color-container-border: black;
+$color-main-theme: #7815B2;
+$color-container-background: lighten(#7815B2, 80%);
+$color-progress-bar: darken($color-background, 15%);
 
-$section-padding: 10px;
+$page-side-margin: 10%;
+$section-padding: 20px;
 $container-border-radius: 8px;
+$progress-height: 10px;
 
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   height: 100%;
   background: $color-background;
+  margin: 0px;
 }
 
 .container {
-  margin: 0% 10%;
+  margin: 0% $page-side-margin;
 }
 
 .menu-header {
   display: flex;
   position: fixed;
-  background: $color-background;
-  margin-top: -10px;
+  background: white;//lighten($color-main-theme, 35%);
+  border-bottom: 1px solid lightgrey;
+  margin: -$page-side-margin;
+  margin-top: 0px;
+  width: 100%;
 
   .title {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: $section-padding;
   }
 
   .menu {
     display: flex;
+    margin-right: $section-padding;
+    margin-left: auto;
   }
   
   li {
     padding-top: 2px;
-    padding-right: 4px;
+    padding-right: 7px;
+  }
+
+  .nav {
+    text-decoration: none;
+    font-weight: bold;
+    color: darken($color-background, 30%);//$color-main-theme;
+    transition: color 250ms linear;
+
+    &:hover,
+    &.toggled {
+      color: $color-main-theme;
+      transition: color 250ms linear;
+    }
   }
 }
 
@@ -39,7 +64,6 @@ body {
   padding-top: 100px;
   
   .title {
-//    padding-left: 10px;
     font-weight: normal;
   }
 }
@@ -48,7 +72,12 @@ body {
   margin-bottom: $section-padding;
   padding: $section-padding;
   border-radius: $container-border-radius;
-  border: 2px solid $color-container-border;
+  background: white;
+ // transition: background-color 500ms linear;
+
+  //&:hover {
+  //  background: lighten($color-main-theme, 50%);
+  //}
 
   h2 {
     font-size: 12px;
@@ -57,6 +86,10 @@ body {
 
   .header {
     display: flex;
+
+    .title, .position {
+      font-size: 16px;
+    }
 
     .date {
       text-align: right;
@@ -67,6 +100,37 @@ body {
 
 .introduction {
   padding-top: 30%;
+}
+
+.skills-list {
+  display: flex;
+
+  .skills-column {
+    flex-grow: 1;
+    flex-basis: 0;
+
+    &.left {
+      padding-left: 0px;
+    }
+  }
+}
+
+.progress-wrapper {
+  height: $progress-height;
+  margin-bottom: 10px;
+
+  .progress-bar {
+    height: 100%;
+    background: $color-progress-bar;
+  }
+
+  .progress {
+    height: 100%;
+    width: 20px; // compute dynamically
+//    position: absolute;
+    margin-top: -$progress-height;
+    background: $color-main-theme;
+  }
 }
 
 ul {

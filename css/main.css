@@ -2,7 +2,8 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   height: 100%;
-  background: #F9F9F9; }
+  background: #F9F9F9;
+  margin: 0px; }
 
 .container {
   margin: 0% 10%; }
@@ -10,15 +11,30 @@ body {
 .menu-header {
   display: flex;
   position: fixed;
-  background: #F9F9F9;
-  margin-top: -10px; }
+  background: white;
+  border-bottom: 1px solid lightgrey;
+  margin: -10%;
+  margin-top: 0px;
+  width: 100%; }
   .menu-header .title {
-    font-size: 20px; }
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px; }
   .menu-header .menu {
-    display: flex; }
+    display: flex;
+    margin-right: 20px;
+    margin-left: auto; }
   .menu-header li {
     padding-top: 2px;
-    padding-right: 4px; }
+    padding-right: 7px; }
+  .menu-header .nav {
+    text-decoration: none;
+    font-weight: bold;
+    color: #adadad;
+    transition: color 250ms linear; }
+    .menu-header .nav:hover, .menu-header .nav.toggled {
+      color: #7815B2;
+      transition: color 250ms linear; }
 
 .block-container {
   padding-top: 100px; }
@@ -26,21 +42,43 @@ body {
     font-weight: normal; }
 
 .subsection-container {
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
   border-radius: 8px;
-  border: 2px solid black; }
+  background: white; }
   .subsection-container h2 {
     font-size: 12px;
     margin: 0px; }
   .subsection-container .header {
     display: flex; }
+    .subsection-container .header .title, .subsection-container .header .position {
+      font-size: 16px; }
     .subsection-container .header .date {
       text-align: right;
       flex-grow: 1; }
 
 .introduction {
   padding-top: 30%; }
+
+.skills-list {
+  display: flex; }
+  .skills-list .skills-column {
+    flex-grow: 1;
+    flex-basis: 0; }
+    .skills-list .skills-column.left {
+      padding-left: 0px; }
+
+.progress-wrapper {
+  height: 10px;
+  margin-bottom: 10px; }
+  .progress-wrapper .progress-bar {
+    height: 100%;
+    background: lightgray; }
+  .progress-wrapper .progress {
+    height: 100%;
+    width: 20px;
+    margin-top: -10px;
+    background: #7815B2; }
 
 ul {
   list-style: none; }
