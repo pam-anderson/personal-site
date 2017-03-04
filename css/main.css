@@ -8,6 +8,15 @@ body {
 .container {
   margin: 0% 10%; }
 
+a[href] {
+  text-decoration: none;
+  font-weight: bold;
+  color: #adadad;
+  transition: color 250ms linear; }
+  a[href]:hover, a[href].toggled {
+    color: #7815B2;
+    transition: color 250ms linear; }
+
 .menu-header {
   display: flex;
   position: fixed;
@@ -76,9 +85,21 @@ body {
     background: lightgray; }
   .progress-wrapper .progress {
     height: 100%;
-    width: 20px;
     margin-top: -10px;
     background: #7815B2; }
+
+.contact-container {
+  display: flex; }
+  .contact-container .link-label {
+    width: 24px; }
+  .contact-container .image-wrapper {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex; }
+    .contact-container .image-wrapper a {
+      display: flex;
+      margin-top: 4px;
+      margin-left: 5px; }
 
 ul {
   list-style: none; }

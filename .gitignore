@@ -1,3 +1,4 @@
 *.swp
 /css/.sass-cache/*
 jquery.*.js
+images/*
