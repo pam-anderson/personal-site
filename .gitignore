@@ -1,4 +1,6 @@
 *.swp
 /css/.sass-cache/*
+/css/*.css
+/css/*.css.map
 jquery.*.js
 images/*
