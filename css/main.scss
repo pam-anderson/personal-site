@@ -151,14 +151,9 @@ a[href] {
   padding: $section-padding;
   border-radius: $container-border-radius;
   background: white;
- // transition: background-color 500ms linear;
-
-  //&:hover {
-  //  background: lighten($color-main-theme, 50%);
-  //}
 
   h2 {
-    font-size: 12px;
+    font-size: 14px;
     margin: 0px;
   }
 
@@ -178,6 +173,30 @@ a[href] {
   .job-skills-list {
     display: flex;
     padding: 0px;
+    padding-bottom: 5px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: rgba($color-main-theme, 0.5);
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 8px;
+      background-color: darken($color-background, 20%);
+    }
 
     li {
       display: inline;
@@ -203,12 +222,13 @@ a[href] {
 
 .introduction {
   margin: 0px;
-  padding: 30% 10% 10% 10%;
+  padding: 10%;
   background: $color-main-theme;
   color: white;
+  text-align: center;
 
-  h1 {
-    text-align: center;
+  h1, h2 {
+    font-weight: inherit;
   }
 
   .profile-picture {
@@ -252,7 +272,9 @@ a[href] {
 
 .contact-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
 
   a {
     padding: 0px 4px;
