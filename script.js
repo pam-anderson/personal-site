@@ -21,3 +21,9 @@ $(function() {
     });
   });
 });
+
+function toggleMenu() {
+  current = $(".menu-header")[0].className.split(" ");
+  $(".menu-header")[0].className = current.length === 1 ?
+    "menu-header opened" : "menu-header";
+}

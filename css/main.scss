@@ -23,7 +23,7 @@ body {
 a[href] {
   text-decoration: none;
   font-weight: bold;
-  color: darken($color-background, 30%);//$color-main-theme;
+  color: darken($color-background, 30%);
   transition: color 250ms linear;
 
   &:hover,
@@ -37,23 +37,33 @@ a[href] {
   display: flex;
   position: fixed;
   top: 0px;
-  background: white;//lighten($color-main-theme, 35%);
+  background: white;
   border-bottom: 1px solid lightgrey;
   box-shadow: 2px 1px 2px lightgrey;
   width: 100%;
+  overflow: hidden;
   height: $header-height;
+  max-height: $header-height;
 
-  -webkit-transition-property: top;
-  -webkit-transition-duration: 0.3s;
-  transition-property: top;
-  transition-duration: 0.3s;
+  -webkit-transition: top 0.3s, max-height 0.15s ease-out;
+  transition: top 0.3s, max-height 0.15s ease-out;
 
   &.collapsed {
     top: -$header-height;
-    -webkit-transition-property: top;
-    -webkit-transition-duration: 0.3s;
-    transition-property: top;
-    transition-duration: 0.3s;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+  }
+
+  &.opened {
+    display: block;
+    height: auto;
+    max-height: 600px;
+    -webkit-transition: max-height 0.15s ease-in;
+    transition: max-height 0.15s ease-in;
+
+    .drop-down-menu {
+      display: block;
+    }
   }
 
   .title {
@@ -62,22 +72,52 @@ a[href] {
     padding-left: $section-padding;
   }
 
-  .menu {
-    display: flex;
+  .hamburger-icon {
+    display: none;
+  }
+
+  .drop-down-menu {
     margin-right: $section-padding;
     margin-left: auto;
+  }
 
-    @media screen and (max-width: 600px) {
+  .menu {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 600px) {
+    display: block;
+
+    .hamburger-icon {
       display: block;
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      margin: 10px $section-padding auto auto;
+    }
+
+    .header-row {
+      display: flex;
+      flex-grow: 1
+    }
+
+    .drop-down-menu {
+      text-align: right;
+    }
+
+    .menu {
+      display: block;
+
+      &.collapsed {
+        display: none;
+      }
 
       li {
         padding-bottom: 12px;
       }
-//      display: none;
-//      visibility: hidden;
     }
   }
-  
+
   li {
     padding-top: 2px;
     padding-right: 7px;

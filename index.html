@@ -10,34 +10,40 @@
     <?php include_once("analyticstracking.php") ?>
     <div class="container">
         <div class="menu-header collapsed">
-            <p class="title">Pamela Anderson</p>
-            <ul class="menu">
-                <li>
-                    <a class="nav" name="experience" href="#experience">
-                      Experience</a>
-                </li>
-                <li>
-                    <a class="nav" name="projects" href="#projects">
-                      Projects</a>
-                </li>
-                <li>
-                    <a class="nav" name="skills" href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a class="nav" name="education" href="#education">
-                      Education</a>
-                </li>
-                <li>
-                    <a class="nav" name="contact" href="#contact">
-                      Contact me</a>
-                </li>
-            </ul>
+            <div class="header-row">
+              <p class="title">Pamela Anderson</p>
+              <img src="images/hamburger-menu.png" class="hamburger-icon"
+                onclick="toggleMenu()"/>
+            </div>
+            <div class="drop-down-menu">
+              <ul class="menu">
+                  <li>
+                      <a class="nav" name="experience" href="#experience">
+                        Experience</a>
+                  </li>
+                  <li>
+                      <a class="nav" name="projects" href="#projects">
+                        Projects</a>
+                  </li>
+                  <li>
+                      <a class="nav" name="skills" href="#skills">Skills</a>
+                  </li>
+                  <li>
+                      <a class="nav" name="education" href="#education">
+                        Education</a>
+                  </li>
+                  <li>
+                      <a class="nav" name="contact" href="#contact">
+                        Contact me</a>
+                  </li>
+              </ul>
+            </div>
         </div>
 
         <div class="block-container introduction">
             <img class="profile-picture" src="images/profile.jpg"/>
             <h1>Pamela V. Anderson</h1>
-            <h1>Software Engineer</h1>
+            <h2>Software Engineer</h2>
         </div>
 
         <div class="block-container overview">
