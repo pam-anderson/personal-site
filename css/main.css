@@ -5,9 +5,6 @@ body {
   background: #F9F9F9;
   margin: 0px; }
 
-.container {
-  margin: 0% 10%; }
-
 a[href] {
   text-decoration: none;
   font-weight: bold;
@@ -20,11 +17,21 @@ a[href] {
 .menu-header {
   display: flex;
   position: fixed;
+  top: 0px;
   background: white;
   border-bottom: 1px solid lightgrey;
-  margin: -10%;
-  margin-top: 0px;
-  width: 100%; }
+  box-shadow: 2px 1px 2px lightgrey;
+  width: 100%;
+  -webkit-transition-property: top;
+  -webkit-transition-duration: 0.3s;
+  transition-property: top;
+  transition-duration: 0.3s; }
+  .menu-header.collapsed {
+    top: -55px;
+    -webkit-transition-property: top;
+    -webkit-transition-duration: 0.3s;
+    transition-property: top;
+    transition-duration: 0.3s; }
   .menu-header .title {
     font-size: 16px;
     font-weight: bold;
@@ -33,6 +40,10 @@ a[href] {
     display: flex;
     margin-right: 20px;
     margin-left: auto; }
+    @media screen and (max-width: 600px) {
+      .menu-header .menu {
+        display: none;
+        visibility: hidden; } }
   .menu-header li {
     padding-top: 2px;
     padding-right: 7px; }
@@ -46,7 +57,8 @@ a[href] {
       transition: color 250ms linear; }
 
 .block-container {
-  padding-top: 100px; }
+  padding-top: 100px;
+  margin: 0% 10%; }
   .block-container .title {
     font-weight: normal; }
 
@@ -65,9 +77,38 @@ a[href] {
     .subsection-container .header .date {
       text-align: right;
       flex-grow: 1; }
+  .subsection-container .job-skills-list {
+    display: flex;
+    padding: 0px; }
+    .subsection-container .job-skills-list li {
+      display: inline;
+      padding: 4px;
+      font-size: 12px;
+      color: #7815B2;
+      border: 1.5px solid black;
+      border-right: none; }
+      .subsection-container .job-skills-list li:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px; }
+      .subsection-container .job-skills-list li:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-right: 1.5px solid black; }
 
 .introduction {
-  padding-top: 30%; }
+  margin: 0px;
+  padding: 30% 10% 10% 10%;
+  background: #7815B2;
+  color: white; }
+  .introduction h1 {
+    text-align: center; }
+  .introduction .profile-picture {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px; }
 
 .skills-list {
   display: flex; }
@@ -89,17 +130,10 @@ a[href] {
     background: #7815B2; }
 
 .contact-container {
-  display: flex; }
-  .contact-container .link-label {
-    width: 24px; }
-  .contact-container .image-wrapper {
-    flex-basis: 0;
-    flex-grow: 1;
-    display: flex; }
-    .contact-container .image-wrapper a {
-      display: flex;
-      margin-top: 4px;
-      margin-left: 5px; }
+  display: flex;
+  justify-content: center; }
+  .contact-container a {
+    padding: 0px 4px; }
 
 ul {
   list-style: none; }

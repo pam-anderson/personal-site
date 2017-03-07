@@ -8,12 +8,16 @@ $(".nav").click(function(e) {
 $(function() {
   $(".block-container").appear()
   $(document.body).on("appear", ".block-container", function(e, $affected) {
-    let section = $affected[0].className.split(" ")[1];
-    $(".nav[name=" + section + "]")[0].className = "nav toggled"
-  });
-
-  $(document.body).on("disappear", ".block-container", function(e, $affected) {
-    let section = $affected[0].className.split(" ")[1];
-    $(".nav[name=" + section + "]")[0].className = "nav"
+    let target = $affected[0].className.split(" ")[1];
+    let sections = $(".nav");
+    sections.map(id => {
+      if (target === "introduction") {
+        $(".menu-header")[0].className = "menu-header collapsed";
+      } else {
+        $(".menu-header")[0].className = "menu-header";
+      }
+      sections[id].className = sections[id].name === target ? 
+          "nav toggled" : "nav";
+    });
   });
 });

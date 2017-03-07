@@ -9,7 +9,7 @@
 <body>
     <?php include_once("analyticstracking.php") ?>
     <div class="container">
-        <div class="menu-header">
+        <div class="menu-header collapsed">
             <p class="title">Pamela Anderson</p>
             <ul class="menu">
                 <li>
@@ -33,9 +33,16 @@
                 </li>
             </ul>
         </div>
+
         <div class="block-container introduction">
-            <h1 class="title">Hello.</h1>
+            <img class="profile-picture" src="images/profile.jpg"/>
+            <h1>Pamela V. Anderson</h1>
+            <h1>Software Engineer</h1>
+        </div>
+
+        <div class="block-container overview">
             <div class="subsection-container">
+              <h1 class="title">Hello.</h1>
               <p class="section-text">
                   I am a software engineer and recent graduate (University 
                   of British Columbia, BASc '16). Most recently, I co-founded 
@@ -69,6 +76,14 @@
                     created a REST API for the mobile app. I also set up 
                     automated builds and deployment to our development 
                     environment.</p>
+                <div class="skills-subsection">
+                    <ul class="job-skills-list">
+                        <li>REACTJS</li>
+                        <li>SASS</li>
+                        <li>MONGODB</li>
+                        <li>METEOR FRAMEWORK</li>
+                    </ul>
+                </div>
             </div>
             <div class="subsection-container">
                 <div class="header">
@@ -86,6 +101,12 @@
                     developer on the team, and worked closely with the 
                     designer and back end developer to bring everything 
                     together.</p>
+                <div class="skills-subsection">
+                    <ul class="job-skills-list">
+                        <li>C#</li>
+                        <li>XAML</li>
+                    </ul>
+                </div>
             </div>
             <div class="subsection-container">
                 <div class="header">
@@ -99,6 +120,12 @@
                     standards, code reviews, and continuous integration. I 
                     designed, developed and created tests for a packet 
                     mirroring feature. </p>
+                <div class="skills-subsection">
+                    <ul class="job-skills-list">
+                        <li>PYTHON</li>
+                        <li>C</li>
+                    </ul>
+                </div>
             </div>
             <div class="subsection-container">
                 <div class="header">
@@ -113,6 +140,12 @@
                     first industry experience with programming. I wrote a 
                     driver for circuit board containing an accelerometer and 
                     gyroscope.</p>
+                <div class="skills-subsection">
+                    <ul class="job-skills-list">
+                        <li>C</li>
+                        <li>EMBEDDED SYSTEMS</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -135,6 +168,15 @@
                     interruption. Key-value pairs were also replicated on 
                     three nodes so that if a node left, its store wasn't 
                     lost.</p>
+                <div class="skills-subsection">
+                    <ul class="job-skills-list">
+                        <li>JAVA</li>
+                        <li>PYTHON</li>
+                        <li>BASH</li>
+                        <li>SOCKET PROGRAMMING</li>
+                        <li>MULTITHREADED PROGRAMMING</li>
+                    </ul>
+                </div>
             </div>
             <div class="subsection-container">
                 <div class="header">
@@ -150,6 +192,14 @@
                     allowed users to choose a custom blend and create their 
                     own label. I also created a REST API to update and send 
                     the tea orders to the tea packaging machine.</p>
+                <div class="skills-subsection">
+                    <ul class="job-skills-list">
+                        <li>JAVA</li>
+                        <li>JQUERY</li>
+                        <li>MONGODB</li>
+                        <li>SPRING FRAMEWORK</li>
+                    </ul>
+                </div>
             </div>
             <div class="subsection-container">
                 <div class="header">
@@ -165,10 +215,17 @@
                     quickly enough to stream video from the Pi, through the 
                     DE2, then to a VGA monitor. I also contributed to the 
                     game logic, and implementing a single-player mode.</p>
+                <div class="skills-subsection">
+                    <ul class="job-skills-list">
+                        <li>PYTHON</li>
+                        <li>C</li>
+                        <li>EMBEDDED SYSTEMS</li>
+                    </ul>
+                </div>
             </div>
         </div>
         
-        <a id="anchor-skills" name="skills"/>
+        <a name="skills"/>
         <div class="block-container skills">
             <h1 class="title">Skills</h1>
             <div class="skills-list">
@@ -210,13 +267,6 @@
                   </li>
               </ul>
               <ul class="skills-column right">
-                  <li>SASS</li>
-                  <li>
-                    <div class="progress-wrapper">
-                      <div class="progress-bar"></div>
-                      <div class="progress" style="width: 70%"></div>
-                    </div>
-                  </li>
                   <li>CSS</li>
                   <li>
                     <div class="progress-wrapper">
@@ -229,6 +279,13 @@
                     <div class="progress-wrapper">
                       <div class="progress-bar"></div>
                       <div class="progress" style="width: 70%"></div>
+                    </div>
+                  </li>
+                  <li>SASS</li>
+                  <li>
+                    <div class="progress-wrapper">
+                      <div class="progress-bar"></div>
+                      <div class="progress" style="width: 50%"></div>
                     </div>
                   </li>
                   <li>Bash</li>
@@ -245,15 +302,6 @@
                       <div class="progress" style="width: 50%"></div>
                     </div>
                   </li>
-                  <!--<li>Meteor Framework</li>
-                  <li>Spring Framework</li>
-                  <li>ReactJS</li>
-                  <li>Embedded Systems</li>
-                  <li>Continuous Deployment</li>
-                  <li>Socket and Multithreaded Programming</li>
-                  <li>Object-Oriented Programming</li>
-                  <li>Git</li>
-                  <li>Agile Methodology</li>-->
               </ul>
             </div>
         </div>
@@ -273,21 +321,14 @@
             </div>
         </div>
         
-        <a name="contact"></a>
+        <a name="contact"/>
         <div class="block-container contact">
-            <h1 class="title">Contact me</h1>
             <div class="contact-container">
-              <div class="image-wrapper">
-                <img class="link-label" src="/images/linkedin-logo.png"
-                  style="width: 20px;height: 20px"/>
+              You can contact me through 
                 <a href="https://www.linkedin.com/in/pamelavanderson/"
-                  target="_blank">www.linkedin.com/in/pamelavanderson</a>
-              </div>
-              <div class="image-wrapper">
-                <img class="link-label" src="/images/email-logo.png"/>
+                  target="_blank">LinkedIn</a> or
                 <a class="link" href="mailto:hello@pamelavanderson.com"
-                  target="_blank">hello@pamelavanderson.com</a>
-              </div>
+                  target="_blank">email</a>
             </div>
         </div>
 
